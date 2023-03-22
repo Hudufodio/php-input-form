@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./header.css";
 
 function Header() {
-  return (
-    <div>PHP INPUT FORM</div>
-  )
+  return <div className="header">Registration Form</div>;
 }
 
-export default Header
+export default Header;
