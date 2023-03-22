@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./input-form.css";
 
 function InputForm() {
   const [formData, setFormData] = useState({
@@ -20,8 +21,8 @@ function InputForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="form-container" onSubmit={handleSubmit}>
+      <label className="label">
         Username:
         <input
           type="text"
@@ -31,7 +32,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label>
+      <label className="label">
         Password:
         <input
           type="text"
@@ -41,7 +42,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label>
+      <label className="label">
         Email:
         <input
           type="email"
@@ -51,7 +52,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label>
+      <label className="label">
         Message:
         <textarea
           name="message"
@@ -60,7 +61,9 @@ function InputForm() {
         />
       </label>
       <br />
-      <button type="submit">Submit</button>
+      <button className="btn" type="submit">
+        Sign Up
+      </button>
     </form>
   );
 }
