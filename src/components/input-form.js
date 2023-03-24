@@ -22,7 +22,7 @@ function InputForm() {
 
   return (
     <form className="form-container" onSubmit={handleSubmit}>
-      <label className="label">
+      <label className="label1">
         Username:
         <input
           type="text"
@@ -32,7 +32,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label className="label">
+      <label className="label2">
         Password:
         <input
           type="text"
@@ -42,7 +42,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label className="label">
+      <label className="label3">
         Email:
         <input
           type="email"
@@ -52,7 +52,7 @@ function InputForm() {
         />
       </label>
       <br />
-      <label className="label">
+      <label className="label4">
         Message:
         <textarea
           name="message"

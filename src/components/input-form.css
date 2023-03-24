@@ -1,15 +1,17 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin-top: 80px;
 }
 
-.label {
+.label1, .label2, .label3, .label4 {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .btn {
   font-size: 20px;
   width: 90px;
   margin: auto;
+  margin-top: 60px;
 }
