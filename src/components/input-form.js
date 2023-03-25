@@ -1,44 +1,57 @@
 import React, { useState } from "react";
 import "./input-form.css";
+import axios from "axios";
 
 function InputForm() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    email: "",
-    message: "",
-  });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [message, setMessage] = useState(" ");
 
-  const handleInputChange = (event) => {
-    const { username, value } = event.target;
-    setFormData({ ...formData, [username]: value });
-  };
+  const handleSubmit = () => {
+    if (username.length === 0) {
+      alert("username is empty!");
+    } else if (password.length === 0) {
+      alert("password is empty!");
+    } else if (email.length === 0) {
+      alert("email is empty!");
+    } else if (message.length === 0) {
+      alert("message is empty!");
+    } else {
+      const url = "http://localhost/enquiry.php";
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData);
-    // send form data to server or perform some other action
+      let fData = new FormData();
+      fData.append("username", username);
+      fData.append("password", password);
+      fData.append("email", email);
+      fData.append("message", message);
+
+      axios
+        .post(url, fData)
+        .then((response) => alert(response.data))
+        .catch((error) => alert(error));
+    }
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form className="form-container">
       <label className="label1">
         Username:
         <input
-          type="text"
+          type="name"
           name="username"
-          value={formData.name}
-          onChange={handleInputChange}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </label>
       <br />
       <label className="label2">
         Password:
         <input
-          type="text"
+          type="password"
           name="password"
-          value={formData.pass}
-          onChange={handleInputChange}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </label>
       <br />
@@ -47,21 +60,22 @@ function InputForm() {
         <input
           type="email"
           name="email"
-          value={formData.string}
-          onChange={handleInputChange}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </label>
       <br />
       <label className="label4">
         Message:
         <textarea
+          type="text"
           name="message"
-          value={formData.textarea}
-          onChange={handleInputChange}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
       </label>
       <br />
-      <button className="btn" type="submit">
+      <button className="btn" type="submit" onSubmit={handleSubmit}>
         Sign Up
       </button>
     </form>
