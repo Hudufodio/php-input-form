@@ -1,17 +1,40 @@
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 80px;
 }
 
-.label1, .label2, .label3, .label4 {
+.label1,
+.label2,
+.label3,
+.label4 {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 1px solid green;
+  width: 200px;
+  height: 34px;
+  outline: none;
+  padding-left: 10px;
+}
+
+textarea {
+  border: 1px solid green;
+  width: 200px;
+  height: 40px;
+  outline: none;
+  padding: 8px;
 }
 
 .btn {
   font-size: 20px;
-  width: 90px;
+  width: 110px;
+  background-color: green;
+  color: white;
   margin: auto;
-  margin-top: 60px;
+  margin: 60px auto;
+  cursor: pointer;
 }
