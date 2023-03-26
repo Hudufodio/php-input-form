@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { AxiosProvider } from "react-axios";
 import "./input-form.css";
-import axios from "axios";
 
 function InputForm() {
   const [username, setUsername] = useState("");
@@ -26,15 +26,14 @@ function InputForm() {
       fData.append("email", email);
       fData.append("message", message);
 
-      axios
-        .post(url, fData)
+      AxiosProvider.post(url, fData)
         .then((response) => alert(response.data))
         .catch((error) => alert(error));
     }
   };
 
   return (
-    <form className="form-container">
+    <form className="form-container" onSubmit={handleSubmit}>
       <label className="label1">
         Username:
         <input
@@ -50,7 +49,7 @@ function InputForm() {
         <input
           type="password"
           name="password"
-          value={password}
+          // value="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
