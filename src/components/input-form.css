@@ -19,6 +19,11 @@ input {
   height: 34px;
   outline: none;
   padding-left: 10px;
+  margin-left: 10px;
+}
+
+.email {
+  margin-left: 30px;
 }
 
 textarea {
@@ -27,6 +32,7 @@ textarea {
   height: 40px;
   outline: none;
   padding: 8px;
+  margin-left: 10px;
 }
 
 .btn {
@@ -35,6 +41,10 @@ textarea {
   background-color: green;
   color: white;
   margin: auto;
-  margin: 60px auto;
+  margin: 30px auto;
   cursor: pointer;
+}
+
+.login {
+  margin-bottom: 20px;
 }

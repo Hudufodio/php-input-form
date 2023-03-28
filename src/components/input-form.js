@@ -61,6 +61,7 @@ function InputForm() {
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="email"
         />
       </label>
       <br />
@@ -77,6 +78,9 @@ function InputForm() {
       <button className="btn" type="submit" onSubmit={handleSubmit}>
         Sign Up
       </button>
+      <div className="login"> 
+        have an account already?<a href=" ">log-in</a>
+      </div>
     </form>
   );
 }
