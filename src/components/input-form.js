@@ -33,7 +33,13 @@ function InputForm() {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form
+      className="form-container"
+      onSubmit={handleSubmit}
+      action="<?php echo $_SERVER"
+      method="POST"
+      encType="multipart/form-data"
+    >
       <label className="label1">
         Username:
         <input
@@ -78,7 +84,7 @@ function InputForm() {
       <button className="btn" type="submit" onSubmit={handleSubmit}>
         Sign Up
       </button>
-      <div className="login"> 
+      <div className="login">
         have an account already?<a href=" ">log-in</a>
       </div>
     </form>
