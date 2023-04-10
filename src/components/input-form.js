@@ -36,7 +36,7 @@ function InputForm() {
     <form
       className="form-container"
       onSubmit={handleSubmit}
-      action="<?php echo $_SERVER"
+      action=""
       method="POST"
       encType="multipart/form-data"
     >
@@ -46,6 +46,7 @@ function InputForm() {
           type="name"
           name="username"
           value={username}
+          placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </label>
@@ -55,7 +56,7 @@ function InputForm() {
         <input
           type="password"
           name="password"
-          // value="password"
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
@@ -66,6 +67,7 @@ function InputForm() {
           type="email"
           name="email"
           value={email}
+          placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
           className="email"
         />
