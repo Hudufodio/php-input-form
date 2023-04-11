@@ -1,6 +1,4 @@
-function Database() {
-return (
-<>
+
     <?php
     define("DB_HOST", "localhost");
     define("DB_USER", "fodio");
@@ -17,12 +15,6 @@ return (
         die('Connection Failed ' . $conn->connect_error);
     }
 
-    echo 'CONNECTED!';
-    ?>
-</>
-)
-}
+    // echo 'CONNECTED!';
 
-
-
-export default Database;
+    //create a component to export

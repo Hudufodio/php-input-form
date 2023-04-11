@@ -44,6 +44,7 @@ function InputForm() {
         Username:
         <input
           type="name"
+          id="username"
           name="username"
           value={username}
           placeholder="username"
