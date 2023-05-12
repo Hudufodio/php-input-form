@@ -88,7 +88,7 @@ function InputForm() {
         Sign Up
       </button>
       <div className="login">
-        have an account already?<a href=" ">log-in</a>
+        have an account already?<a href=" ">logIn</a>
       </div>
     </form>
   );
