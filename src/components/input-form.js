@@ -18,7 +18,7 @@ function InputForm() {
     } else if (message.length === 0) {
       alert("message is empty!");
     } else {
-      const url = "http://localhost/enquiry.php";
+      const url = "http://localhost/8080";
 
       let fData = new FormData();
       fData.append("username", username);
